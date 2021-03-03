@@ -59,6 +59,12 @@ $(function () {
         $(".mobile-menu").toggleClass("opened");
     });
 
+    $(".filter-accordion__header").click(function () {
+        $(this).toggleClass("active");
+        $(this).siblings(".filter-accordion__body").slideToggle(300);
+    });
+
+
 
     //$('[data-toggle="datepicker"]').datepicker();
 
