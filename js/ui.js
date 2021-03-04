@@ -14,6 +14,7 @@ $(function () {
         regulateMode($body);
     });
 
+    // Табы
     $(".tablink").click(function (e) {
         e.preventDefault();
         let $this = $(this);
@@ -25,9 +26,11 @@ $(function () {
         $(tab_target).addClass("active");
     });
 
+    // Добавить в избранное
     $(".add-to-fav").click(function (e) {
         $(this).toggleClass("added");
     });
+
 
     $(".secondary-menu__link").click(function (e) {
         e.preventDefault();
@@ -35,40 +38,85 @@ $(function () {
         $(this).addClass("active");
     });
 
+    // Плашки на странице видео.фильтр
     $(".video-filter-menu__link").click(function (e) {
         e.preventDefault();
         $(".video-filter-menu__link").removeClass("active");
         $(this).addClass("active");
     });
 
+    // Сортировка в слайдерах на главной
     $(".index-showcase__sort-courses").click(function (e) {
         e.preventDefault();
         $(".index-showcase__sort-courses").removeClass("active");
         $(this).addClass("active");
     });
-
     $(".index-showcase__sort-podcasts").click(function (e) {
         e.preventDefault();
         $(".index-showcase__sort-podcasts").removeClass("active");
         $(this).addClass("active");
     });
 
+    // Мобильное меню
     $(".mobile-menu-button").click(function (e) {
         e.preventDefault();
         $(this).toggleClass("opened");
         $(".mobile-menu").toggleClass("opened");
     });
 
+    // Аккордеон на странице видео.фильтр
     $(".filter-accordion__header").click(function () {
         $(this).toggleClass("active");
         $(this).siblings(".filter-accordion__body").slideToggle(300);
     });
 
+    // Главная. Всплывающее верхнее окно
+    $(".message-content__close").click(function (e) {
+        e.preventDefault();
+        $(".message").slideUp(200);
+    });
 
+    // Плашка на главной
+    var counterHeight = $(".fixed-counter").outerHeight()/2;
+    $(".fixed-counter").css({'top':'calc(50% - ' + counterHeight + 'px)'});
+    $(".fixed-counter__toggle").click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass("active");
+        $(".fixed-counter__list").show();
+        var counterHeight = $(".fixed-counter").outerHeight()/2;
+        $(".fixed-counter").css({'top':'calc(50% - ' + counterHeight + 'px)'});
+        if($(this).hasClass("active")){
+        }
+        else {
+            $(".fixed-counter").hide();
+        }
+    });
+    
+    // Звездочки рейтинга
+    $(".rating-point").on("mouseover", function () {
+        var rindex = $(this).index();
+        var i = 0;
+        $(this).parent().find(".rating-point").each(function () {
+            if (i <= rindex) $(this).addClass("hovered"); else $(this).removeClass("hovered");
+            i++;
+        });
+        $(this).closest(".rating-point").on("mouseout", function () {
+            $(this).parent().find(".rating-point").removeClass("hovered");
+        });
+    });
+    $(".rating-point").click(function () {
+        var rindex = $(this).index();
+        var i = 0;
+        $(this).parent().find(".rating-point").each(function () {
+            if (i <= rindex) $(this).addClass("active"); else $(this).removeClass("active");
+            i++;
+        });
+    });
 
     //$('[data-toggle="datepicker"]').datepicker();
 
     //$('.lightbox-link').simpleLightbox();
+
 
     $(".dropdown-container").mouseenter(function () {
         let $this = $(this);
@@ -77,6 +125,7 @@ $(function () {
             $this.find(".menu-dropdown").stop().fadeIn(400);
         }
     });
+
 
     $("#loginHeaderButton").click(function (e) {
         e.preventDefault();
@@ -156,11 +205,6 @@ $(function () {
         $this.parent().find(".accordion-body").stop().slideToggle(300);
     });
 
-    // Главная. Всплывающее верхнее окно
-    $(".message-content__close").click(function (e) {
-        e.preventDefault();
-        $(".message").slideUp(200);
-    });
 
     function regulateMode() {
         window_height = window.innerHeight;
