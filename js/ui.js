@@ -62,6 +62,8 @@ $(function () {
         e.preventDefault();
         $(this).toggleClass("opened");
         $(".mobile-menu").toggleClass("opened");
+        $('#popupLogin').removeClass("active");
+        $("#loginHeaderButton").removeClass("active");
     });
 
     // Аккордеон на странице видео.фильтр
@@ -77,46 +79,27 @@ $(function () {
     });
 
     // Плашка на главной
-    var counterHeight = $(".fixed-counter").outerHeight()/2;
-    $(".fixed-counter").css({'top':'calc(50% - ' + counterHeight + 'px)'});
+    var counterHeight = $(".fixed-counter").outerHeight() / 2;
+    $(".fixed-counter").css({ 'top': 'calc(50% - ' + counterHeight + 'px)' });
     $(".fixed-counter__toggle").click(function (e) {
         e.preventDefault();
         $(this).toggleClass("active");
         $(".fixed-counter__list").show();
-        var counterHeight = $(".fixed-counter").outerHeight()/2;
-        $(".fixed-counter").css({'top':'calc(50% - ' + counterHeight + 'px)'});
-        if($(this).hasClass("active")){
+        var counterHeight = $(".fixed-counter").outerHeight() / 2;
+        $(".fixed-counter").css({ 'top': 'calc(50% - ' + counterHeight + 'px)' });
+        if ($(this).hasClass("active")) {
         }
         else {
             $(".fixed-counter").hide();
         }
     });
-    
-    // Звездочки рейтинга
-    $(".rating-point").on("mouseover", function () {
-        var rindex = $(this).index();
-        var i = 0;
-        $(this).parent().find(".rating-point").each(function () {
-            if (i <= rindex) $(this).addClass("hovered"); else $(this).removeClass("hovered");
-            i++;
-        });
-        $(this).closest(".rating-point").on("mouseout", function () {
-            $(this).parent().find(".rating-point").removeClass("hovered");
-        });
+
+    // Аудиоплеер
+    $(".speed-button").click(function (e) {
+        e.preventDefault();
+        var audio = document.getElementById("audio-player");
+        audio.playbackRate = 1.25;
     });
-    $(".rating-point").click(function () {
-        var rindex = $(this).index();
-        var i = 0;
-        $(this).parent().find(".rating-point").each(function () {
-            if (i <= rindex) $(this).addClass("active"); else $(this).removeClass("active");
-            i++;
-        });
-    });
-
-    //$('[data-toggle="datepicker"]').datepicker();
-
-    //$('.lightbox-link').simpleLightbox();
-
 
     $(".dropdown-container").mouseenter(function () {
         let $this = $(this);
@@ -126,11 +109,28 @@ $(function () {
         }
     });
 
-
     $("#loginHeaderButton").click(function (e) {
         e.preventDefault();
         $("#popupLogin").toggleClass("active");
         $(this).toggleClass("active");
+    });
+
+    $(document).click(function (event) {
+        var $target = $(event.target);
+        if (!$target.closest('#loginWrapper').length &&
+            $('#popupLogin').is(":visible")) {
+            $('#popupLogin').removeClass("active");
+            $("#loginHeaderButton").removeClass("active");
+        }
+    });
+
+    $(".password-button").click(function (e) {
+        e.preventDefault();
+        let $this = $(this);
+        $this.toggleClass("active");
+        let $target = $this.parent().find(".password-input");
+        if ($target.attr("type")=="password") $target.attr("type", "text");
+        else $target.attr("type", "password");
     });
 
     $(".menu-dropdown").mouseleave(function () {
@@ -147,21 +147,6 @@ $(function () {
             $this.parent().find(".menu-dropdown").stop().slideToggle();
             $this.toggleClass("active");
         }
-    });
-
-    $(".range-slider").each(function () {
-        let $this = $(this);
-        var min_data = parseInt($this.attr("data-min"));
-        var max_data = parseInt($this.attr("data-max"));
-        $this = $this[0];
-        noUiSlider.create($this, {
-            start: [min_data, max_data],
-            connect: true,
-            range: {
-                'min': min_data,
-                'max': max_data
-            }
-        });
     });
 
     $(".link-modal").click(function (e) {
@@ -205,13 +190,11 @@ $(function () {
         $this.parent().find(".accordion-body").stop().slideToggle(300);
     });
 
-
     function regulateMode() {
         window_height = window.innerHeight;
         window_width = $('body').innerWidth();;
         $body.removeAttr("class");
         $(".header").removeAttr("style");
-        //console.log("width: ", window_width, "height:", md_width);
         if (window_width > md_width) {
             current_mode = 0;
             $body.addClass("normal");
