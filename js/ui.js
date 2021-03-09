@@ -38,10 +38,10 @@ $(function () {
         $(this).addClass("active");
     });
 
-    // Плашки на странице видео.фильтр
-    $(".video-filter-menu__link").click(function (e) {
+    // Плашки на страницах видео.фильтр, мероприятия
+    $(".filter-menu__link").click(function (e) {
         e.preventDefault();
-        $(".video-filter-menu__link").removeClass("active");
+        $(".filter-menu__link").removeClass("active");
         $(this).addClass("active");
     });
 
@@ -94,11 +94,17 @@ $(function () {
         }
     });
 
-    // Аудиоплеер
+    // Расшифровка
+    $(".decryption-button").click(function (e) {
+        e.preventDefault();
+        $(".decryption-text").toggleClass("active");
+    });
+
     $(".speed-button").click(function (e) {
         e.preventDefault();
         var audio = document.getElementById("audio-player");
-        audio.playbackRate = 1.25;
+        if (audio.playbackRate == 1.25) audio.playbackRate = 1;
+        else audio.playbackRate = 1.25;
     });
 
     $(".dropdown-container").mouseenter(function () {
@@ -129,7 +135,7 @@ $(function () {
         let $this = $(this);
         $this.toggleClass("active");
         let $target = $this.parent().find(".password-input");
-        if ($target.attr("type")=="password") $target.attr("type", "text");
+        if ($target.attr("type") == "password") $target.attr("type", "text");
         else $target.attr("type", "password");
     });
 
@@ -211,4 +217,36 @@ $(function () {
         }
     }
 
+    $('.autocomplete').autocomplete({
+        serviceUrl: 'https://amosenko.ru/tmp/response.json', // ВСТАВЬТЕ СЮДА АДРЕС СВОЕГО СКРИПТА, КОТОРЫЙ ПРИНИМАЕТ ЗАПРОС ЧЕРЕЗ GET (?QUERY=) и ОТДАЕТ В ОТВЕТ JSON
+        onSelect: function (suggestion) {
+            console.log("Вы выбрали"+suggestion);
+        }
+    });
+
+});
+
+
+MediaElementPlayer.prototype.buildspeed = function (player, controls, layers, media) {
+    var speed =
+        $('<div class="speed-button ' + ((player.options.speed) ? 'mejs-speed-high' : 'mejs-speed-normal') + '">' +
+            '<span>1.25x</span>' +
+            '</div>')
+            .appendTo(controls)
+            .click(function () {
+                player.options.speed = !player.options.speed;
+                if (player.options.speed) {
+                    speed.removeClass('mejs-speed-normal').addClass('mejs-speed-high');
+                } else {
+                    speed.removeClass('mejs-speed-high').addClass('mejs-speed-normal');
+                }
+        });
+}
+MediaElementPlayer.prototype.builddownload = function (player, controls, layers, media) {
+    var download = $('<a class="download-button" download href="' + player.getSrc() + '"></a>').appendTo(controls);
+}
+
+$('.dostoverno-audio').mediaelementplayer({
+    features: ['playpause', 'speed', 'current', 'progress', 'duration', 'download'],
+    alwaysShowControls: true,
 });
