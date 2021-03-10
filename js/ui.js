@@ -107,6 +107,12 @@ $(function () {
         $(this).addClass("active");
     });
 
+    // Аккордеон на странице FAQ
+    $(".faq-accordion-header").click(function () {
+        $(this).toggleClass("active");
+        $(this).siblings(".faq-accordion-body").slideToggle(300);
+    });
+
     $(".speed-button").click(function (e) {
         e.preventDefault();
         var audio = document.getElementById("audio-player");

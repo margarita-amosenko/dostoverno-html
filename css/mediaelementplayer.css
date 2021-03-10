@@ -190,6 +190,8 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 
 .mejs__controls:not([style*='display: none']) {
     background: #6183B6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     /* background: linear-gradient(transparent, rgba(0, 0, 0, 0.35)); */
 }
 
