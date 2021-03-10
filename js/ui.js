@@ -100,6 +100,13 @@ $(function () {
         $(".decryption-text").toggleClass("active");
     });
 
+    // Pagination
+    $(".pagination__link").click(function (e) {
+        e.preventDefault();
+        $(".pagination__link").removeClass("active");
+        $(this).addClass("active");
+    });
+
     $(".speed-button").click(function (e) {
         e.preventDefault();
         var audio = document.getElementById("audio-player");
