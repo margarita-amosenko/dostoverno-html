@@ -4,33 +4,36 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<title>Dostoverno Index</title>
+	<title>Контакты</title>
 	<meta name="description" content="" />
 	<link rel="icon" type="image/png" href="img/favicon.ico" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-	<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width,height=device-height" />
-	<link rel="stylesheet" href="css/style.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+		rel="stylesheet">
+	<meta name="viewport"
+		content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width,height=device-height" />
+	<link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 	<div class="message">
-        <div class="container">
-            <div class="message-content">
-                <div class="message-content__text">Premium доступ — <a href="#">подпишитесь</a> и получите доступ к <span>8</span> эксклюзивным видео еженедельно</div>
-                <a href="#" class="message-content__close"><img src="img/icon-close.svg"></a>
-            </div>
-        </div>
-    </div>
-	<header class="second-header-wrapper">
+		<div class="container">
+			<div class="message-content">
+				<div class="message-content__text">Premium доступ — <a href="#">подпишитесь</a> и получите доступ к
+					<span>8</span> эксклюзивным видео еженедельно</div>
+				<a href="#" class="message-content__close"><img src="img/icon-close.svg"></a>
+			</div>
+		</div>
+	</div>
+	<header class="header">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 second-header">
+				<div class="col-12 header__wrapper">
 					<div class="mobile-menu-wrapper"><a href="#" class="mobile-menu-button"><span></span></a></div>
 					<a href="/" class="logo">
 						<img src="img/logo.svg">
 					</a>
-					<ul class="header-menu">
+					<ul class="header__menu">
 						<li><a href="#">Новости</a></li>
 						<li><a href="#">О лектории</a></li>
 						<li><a href="#">Вопросы/ответы</a></li>
@@ -44,55 +47,72 @@
 					</div>
 				</div>
 			</div>
-			<div class="mobile-menu"></div>
+		</div>
+		<div class="mobile-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">О лектории</a></li>
+							<li><a href="#">Вопросы/ответы</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	</header>
 	<div class="screen-wrapper">
 		<div class="container">
-            <div class="row">
-                <div class="col main-menu-row">
-                    <ul class="main-menu">
-                        <li><a href="#" class="main-menu__link">Видео</a></li>
-                        <li><a href="#" class="main-menu__link">Подкасты</a></li>
-                        <li><a href="#" class="main-menu__link">Курсы</a></li>
-                        <li><a href="#" class="main-menu__link">Мероприятия</a></li>
-                        <li><a href="#" class="main-menu__link">Тренажер</a></li>
-                    </ul>
+			<div class="row">
+				<div class="col main-menu-row">
+					<ul class="main-menu">
+						<li><a href="#" class="main-menu__link">Видео</a></li>
+						<li><a href="#" class="main-menu__link">Подкасты</a></li>
+						<li><a href="#" class="main-menu__link">Курсы</a></li>
+						<li><a href="#" class="main-menu__link">Мероприятия</a></li>
+						<li><a href="#" class="main-menu__link">Тренажер</a></li>
+					</ul>
 					<form action="" class="search-form" if="headerSearchForm">
-						<input type="text" class="search-input header__search-input" id="headerSearchInput" placeholder="">
-						<input type="submit" class="search-submit header__search-submit" id="headerSearchSubmit" value="">
+						<input type="text" class="search-input header__search-input" id="headerSearchInput"
+							placeholder="">
+						<input type="submit" class="search-submit header__search-submit" id="headerSearchSubmit"
+							value="">
 					</form>
 				</div>
-            </div>
+			</div>
 			<div class="main-screen main-screen-inner-page">
 				<div class="main-screen__content info-page">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="page-title">Контакты</h2>
-                        </div>
-                    </div>
 					<div class="row">
-                        <div class="col-12">
-                            <div class="contacts-list-title">Юридический адрес:</div>
-                            <ul class="contacts-list">
-                                <li><img src="img/contacts-icon-pin.svg">
-                                    119019, г. Москва,<br>
-                                    улица Воздвиженка, дом 1
-                                </li>
-                                <li>
-                                    <img src="img/contacts-icon-mail.svg">
-                                    <a href="mailto:info@dostoverno.ru">info@dostoverno.ru</a>
-                                </li>
-                                <li>
-                                    <img src="img/contacts-icon-phone.svg">
-                                    <a href="tel:+78007776827"><strong>8 800 777 68 27</strong></a>
-                                </li>
-
-                            </ul>
-                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0828f98a7554a57e43a120c1e1cd588e5ffdf65233e3069a618fe5abc1585017&amp;width=100%25&amp;height=245&amp;lang=ru_RU&amp;scroll=true"></script>
-							<a href="#" class="back-link">На Главную страницу  ></a>
+						<div class="col-12">
+							<h2 class="page-title">Контакты</h2>
 						</div>
-                    </div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="contacts-list-title">Юридический адрес:</div>
+							<ul class="contacts-list">
+								<li><img src="img/contacts-icon-pin.svg">
+									119019, г. Москва,<br>
+									улица Воздвиженка, дом 1
+								</li>
+								<li>
+									<img src="img/contacts-icon-mail.svg">
+									<a href="mailto:info@dostoverno.ru">info@dostoverno.ru</a>
+								</li>
+								<li>
+									<img src="img/contacts-icon-phone.svg">
+									<a href="tel:+78007776827"><strong>8 800 777 68 27</strong></a>
+								</li>
+
+							</ul>
+							<script type="text/javascript" charset="utf-8" async
+								src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0828f98a7554a57e43a120c1e1cd588e5ffdf65233e3069a618fe5abc1585017&amp;width=100%25&amp;height=245&amp;lang=ru_RU&amp;scroll=true"></script>
+							<a href="#" class="back-link">На Главную страницу ></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -113,7 +133,7 @@
 					</div>
 					<div class="col footer-registration">
 						<a href="#" class="user-button">
-                            <span>Личный кабинет</span>
+							<span>Личный кабинет</span>
 							<img src="img/tmp/author-photo-2.jpg">
 						</a>
 					</div>
@@ -126,33 +146,46 @@
 					<div class="col-xl-7 col-md-6 footer-contacts">
 						<div class="footer-contacts-links">
 							<a href="tel:+88007776827" class="contacts-link">
-								<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M11.7796 9.3999L9.04134 6.91027C8.91191 6.79263 8.74182 6.72988 8.56699 6.73529C8.39216 6.74069 8.22628 6.81382 8.10435 6.93923L6.49241 8.59697C6.10441 8.52287 5.32438 8.2797 4.52144 7.47879C3.7185 6.67518 3.47533 5.89313 3.40325 5.50783L5.05965 3.89523C5.18522 3.77339 5.25846 3.60748 5.26386 3.4326C5.26927 3.25773 5.20642 3.08761 5.08862 2.95825L2.59964 0.220734C2.48179 0.0909691 2.31799 0.0122571 2.14304 0.00131473C1.96808 -0.00962763 1.79575 0.0480617 1.66265 0.162131L0.200925 1.4157C0.0844657 1.53258 0.0149551 1.68814 0.00557879 1.85287C-0.00452532 2.02127 -0.197177 6.01034 2.89603 9.10486C5.59449 11.8026 8.97465 12 9.90558 12C10.0416 12 10.1252 11.996 10.1474 11.9946C10.3121 11.9854 10.4676 11.9156 10.5839 11.7986L11.8368 10.3362C11.9513 10.2035 12.0094 10.0313 11.9987 9.8564C11.988 9.68146 11.9094 9.51763 11.7796 9.3999Z" fill="#758293"/>
+								<svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M11.7796 9.3999L9.04134 6.91027C8.91191 6.79263 8.74182 6.72988 8.56699 6.73529C8.39216 6.74069 8.22628 6.81382 8.10435 6.93923L6.49241 8.59697C6.10441 8.52287 5.32438 8.2797 4.52144 7.47879C3.7185 6.67518 3.47533 5.89313 3.40325 5.50783L5.05965 3.89523C5.18522 3.77339 5.25846 3.60748 5.26386 3.4326C5.26927 3.25773 5.20642 3.08761 5.08862 2.95825L2.59964 0.220734C2.48179 0.0909691 2.31799 0.0122571 2.14304 0.00131473C1.96808 -0.00962763 1.79575 0.0480617 1.66265 0.162131L0.200925 1.4157C0.0844657 1.53258 0.0149551 1.68814 0.00557879 1.85287C-0.00452532 2.02127 -0.197177 6.01034 2.89603 9.10486C5.59449 11.8026 8.97465 12 9.90558 12C10.0416 12 10.1252 11.996 10.1474 11.9946C10.3121 11.9854 10.4676 11.9156 10.5839 11.7986L11.8368 10.3362C11.9513 10.2035 12.0094 10.0313 11.9987 9.8564C11.988 9.68146 11.9094 9.51763 11.7796 9.3999Z"
+										fill="#758293" />
 								</svg>
-								8 800 777-6827	
+								8 800 777-6827
 							</a>
 							<a href="mailto:info@dostoverno.ru" class="contacts-link">
-								<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M0.414557 0.857333L5.83122 3.54333C6.01322 3.63333 6.24867 3.676 6.48556 3.676C6.72244 3.676 6.95789 3.63333 7.13989 3.54333L12.5566 0.857333C12.9097 0.682 13.2434 0 12.5956 0H0.376279C-0.271554 0 0.0621123 0.682 0.414557 0.857333ZM12.7205 2.326L7.13989 5.01067C6.89433 5.12933 6.72244 5.14333 6.48556 5.14333C6.24867 5.14333 6.07678 5.12933 5.83122 5.01067C5.58567 4.892 0.679612 2.518 0.278779 2.32533C-0.00288769 2.18933 1.16715e-06 2.34867 1.16715e-06 2.47133V7.33333C1.16715e-06 7.61333 0.408779 8 0.722223 8H12.2778C12.5912 8 13 7.61333 13 7.33333V2.472C13 2.34933 13.0029 2.19 12.7205 2.326Z" fill="#758293"/>
+								<svg width="13" height="8" viewBox="0 0 13 8" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M0.414557 0.857333L5.83122 3.54333C6.01322 3.63333 6.24867 3.676 6.48556 3.676C6.72244 3.676 6.95789 3.63333 7.13989 3.54333L12.5566 0.857333C12.9097 0.682 13.2434 0 12.5956 0H0.376279C-0.271554 0 0.0621123 0.682 0.414557 0.857333ZM12.7205 2.326L7.13989 5.01067C6.89433 5.12933 6.72244 5.14333 6.48556 5.14333C6.24867 5.14333 6.07678 5.12933 5.83122 5.01067C5.58567 4.892 0.679612 2.518 0.278779 2.32533C-0.00288769 2.18933 1.16715e-06 2.34867 1.16715e-06 2.47133V7.33333C1.16715e-06 7.61333 0.408779 8 0.722223 8H12.2778C12.5912 8 13 7.61333 13 7.33333V2.472C13 2.34933 13.0029 2.19 12.7205 2.326Z"
+										fill="#758293" />
 								</svg>
 								info@dostoverno.ru
 							</a>
 							<div class="footer-socials">
 								<a href="#">
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M9.99731 4.86903C7.15795 4.86903 4.86644 7.16058 4.86644 10C4.86644 12.8394 7.15795 15.131 9.99731 15.131C12.8367 15.131 15.1282 12.8394 15.1282 10C15.1282 7.16058 12.8367 4.86903 9.99731 4.86903ZM9.99731 13.3348C8.16111 13.3348 6.66262 11.8362 6.66262 10C6.66262 8.16376 8.16111 6.66525 9.99731 6.66525C11.8335 6.66525 13.332 8.16376 13.332 10C13.332 11.8362 11.8335 13.3348 9.99731 13.3348ZM15.3383 3.46308C14.6754 3.46308 14.14 3.99845 14.14 4.66139C14.14 5.32434 14.6754 5.8597 15.3383 5.8597C16.0013 5.8597 16.5366 5.32684 16.5366 4.66139C16.5368 4.50397 16.5059 4.34806 16.4458 4.20259C16.3856 4.05711 16.2974 3.92493 16.1861 3.81362C16.0748 3.70231 15.9426 3.61405 15.7971 3.5539C15.6516 3.49375 15.4957 3.46289 15.3383 3.46308ZM19.9989 10C19.9989 8.61907 20.0114 7.25064 19.9338 5.87221C19.8563 4.27113 19.4911 2.85017 18.3203 1.67938C17.147 0.506085 15.7286 0.14334 14.1275 0.065788C12.7466 -0.0117644 11.3782 0.000744113 9.99981 0.000744113C8.61891 0.000744113 7.25051 -0.0117644 5.8721 0.065788C4.27105 0.14334 2.85012 0.508587 1.67935 1.67938C0.506076 2.85267 0.143338 4.27113 0.0657868 5.87221C-0.0117642 7.25314 0.000744099 8.62157 0.000744099 10C0.000744099 11.3784 -0.0117642 12.7494 0.0657868 14.1278C0.143338 15.7289 0.508578 17.1498 1.67935 18.3206C2.85262 19.4939 4.27105 19.8567 5.8721 19.9342C7.25301 20.0118 8.62141 19.9993 9.99981 19.9993C11.3807 19.9993 12.7491 20.0118 14.1275 19.9342C15.7286 19.8567 17.1495 19.4914 18.3203 18.3206C19.4936 17.1473 19.8563 15.7289 19.9338 14.1278C20.0139 12.7494 19.9989 11.3809 19.9989 10ZM17.7974 15.899C17.6148 16.3543 17.3947 16.6945 17.0419 17.0448C16.6892 17.3975 16.3515 17.6176 15.8962 17.8003C14.5803 18.3231 11.4558 18.2055 9.99731 18.2055C8.53885 18.2055 5.4118 18.3231 4.09593 17.8028C3.64064 17.6201 3.30041 17.4 2.95018 17.0473C2.59745 16.6945 2.37731 16.3568 2.19469 15.9015C1.67434 14.5831 1.79192 11.4585 1.79192 10C1.79192 8.54151 1.67434 5.4144 2.19469 4.09851C2.37731 3.6432 2.59745 3.30298 2.95018 2.95274C3.30291 2.6025 3.64064 2.37985 4.09593 2.19723C5.4118 1.67688 8.53885 1.79446 9.99731 1.79446C11.4558 1.79446 14.5828 1.67688 15.8987 2.19723C16.354 2.37985 16.6942 2.6 17.0444 2.95274C17.3972 3.30548 17.6173 3.6432 17.7999 4.09851C18.3203 5.4144 18.2027 8.54151 18.2027 10C18.2027 11.4585 18.3203 14.5831 17.7974 15.899Z" fill="white"/>
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M9.99731 4.86903C7.15795 4.86903 4.86644 7.16058 4.86644 10C4.86644 12.8394 7.15795 15.131 9.99731 15.131C12.8367 15.131 15.1282 12.8394 15.1282 10C15.1282 7.16058 12.8367 4.86903 9.99731 4.86903ZM9.99731 13.3348C8.16111 13.3348 6.66262 11.8362 6.66262 10C6.66262 8.16376 8.16111 6.66525 9.99731 6.66525C11.8335 6.66525 13.332 8.16376 13.332 10C13.332 11.8362 11.8335 13.3348 9.99731 13.3348ZM15.3383 3.46308C14.6754 3.46308 14.14 3.99845 14.14 4.66139C14.14 5.32434 14.6754 5.8597 15.3383 5.8597C16.0013 5.8597 16.5366 5.32684 16.5366 4.66139C16.5368 4.50397 16.5059 4.34806 16.4458 4.20259C16.3856 4.05711 16.2974 3.92493 16.1861 3.81362C16.0748 3.70231 15.9426 3.61405 15.7971 3.5539C15.6516 3.49375 15.4957 3.46289 15.3383 3.46308ZM19.9989 10C19.9989 8.61907 20.0114 7.25064 19.9338 5.87221C19.8563 4.27113 19.4911 2.85017 18.3203 1.67938C17.147 0.506085 15.7286 0.14334 14.1275 0.065788C12.7466 -0.0117644 11.3782 0.000744113 9.99981 0.000744113C8.61891 0.000744113 7.25051 -0.0117644 5.8721 0.065788C4.27105 0.14334 2.85012 0.508587 1.67935 1.67938C0.506076 2.85267 0.143338 4.27113 0.0657868 5.87221C-0.0117642 7.25314 0.000744099 8.62157 0.000744099 10C0.000744099 11.3784 -0.0117642 12.7494 0.0657868 14.1278C0.143338 15.7289 0.508578 17.1498 1.67935 18.3206C2.85262 19.4939 4.27105 19.8567 5.8721 19.9342C7.25301 20.0118 8.62141 19.9993 9.99981 19.9993C11.3807 19.9993 12.7491 20.0118 14.1275 19.9342C15.7286 19.8567 17.1495 19.4914 18.3203 18.3206C19.4936 17.1473 19.8563 15.7289 19.9338 14.1278C20.0139 12.7494 19.9989 11.3809 19.9989 10ZM17.7974 15.899C17.6148 16.3543 17.3947 16.6945 17.0419 17.0448C16.6892 17.3975 16.3515 17.6176 15.8962 17.8003C14.5803 18.3231 11.4558 18.2055 9.99731 18.2055C8.53885 18.2055 5.4118 18.3231 4.09593 17.8028C3.64064 17.6201 3.30041 17.4 2.95018 17.0473C2.59745 16.6945 2.37731 16.3568 2.19469 15.9015C1.67434 14.5831 1.79192 11.4585 1.79192 10C1.79192 8.54151 1.67434 5.4144 2.19469 4.09851C2.37731 3.6432 2.59745 3.30298 2.95018 2.95274C3.30291 2.6025 3.64064 2.37985 4.09593 2.19723C5.4118 1.67688 8.53885 1.79446 9.99731 1.79446C11.4558 1.79446 14.5828 1.67688 15.8987 2.19723C16.354 2.37985 16.6942 2.6 17.0444 2.95274C17.3972 3.30548 17.6173 3.6432 17.7999 4.09851C18.3203 5.4144 18.2027 8.54151 18.2027 10C18.2027 11.4585 18.3203 14.5831 17.7974 15.899Z"
+											fill="white" />
 									</svg>
 								</a>
 								<a href="#">
-									<svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M23.4516 2.65413C24 4.5475 24 8.5 24 8.5C24 8.5 24 12.4525 23.4516 14.3459C23.1468 15.3924 22.2552 16.2159 21.126 16.4942C19.0752 17 12 17 12 17C12 17 4.9284 17 2.874 16.4942C1.74 16.2116 0.8496 15.3893 0.5484 14.3459C3.57628e-08 12.4525 0 8.5 0 8.5C0 8.5 3.57628e-08 4.5475 0.5484 2.65413C0.8532 1.60756 1.7448 0.784125 2.874 0.50575C4.9284 -1.8999e-07 12 0 12 0C12 0 19.0752 -1.8999e-07 21.126 0.50575C22.26 0.788375 23.1504 1.61075 23.4516 2.65413ZM9.6 12.2188L16.8 8.5L9.6 4.78125V12.2188Z" fill="white"/>
+									<svg width="24" height="17" viewBox="0 0 24 17" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M23.4516 2.65413C24 4.5475 24 8.5 24 8.5C24 8.5 24 12.4525 23.4516 14.3459C23.1468 15.3924 22.2552 16.2159 21.126 16.4942C19.0752 17 12 17 12 17C12 17 4.9284 17 2.874 16.4942C1.74 16.2116 0.8496 15.3893 0.5484 14.3459C3.57628e-08 12.4525 0 8.5 0 8.5C0 8.5 3.57628e-08 4.5475 0.5484 2.65413C0.8532 1.60756 1.7448 0.784125 2.874 0.50575C4.9284 -1.8999e-07 12 0 12 0C12 0 19.0752 -1.8999e-07 21.126 0.50575C22.26 0.788375 23.1504 1.61075 23.4516 2.65413ZM9.6 12.2188L16.8 8.5L9.6 4.78125V12.2188Z"
+											fill="white" />
 									</svg>
 								</a>
 							</div>
 						</div>
 						<div class="privacy">
 							<span>АНО АРВТ — 2020. Все права защищены.</span>
-							<a href="#">Политика конфиденциальности и Соглашение об использовании материалов и сервисов сайта</a>
+							<a href="#">Политика конфиденциальности и Соглашение об использовании материалов и сервисов
+								сайта</a>
 						</div>
 					</div>
 					<div class="col-12 footer-search-mobile">
@@ -184,7 +217,8 @@
 					<div class="col"></div>
 					<div class="col-12 privacy privacy-mobile">
 						<span>АНО АРВТ — 2020. Все права защищены.</span>
-						<a href="#">Политика конфиденциальности и Соглашение об использовании материалов и сервисов сайта</a>
+						<a href="#">Политика конфиденциальности и Соглашение об использовании материалов и сервисов
+							сайта</a>
 					</div>
 				</div>
 			</div>
@@ -197,17 +231,22 @@
 						<form action="" class="subscribe-form">
 							<input type="text" class="subscribe-input" placeholder="email для рассылки">
 							<a href="#" class="subscribe-submit">подписаться</a>
-							<a href="#" class="subscribe-submit subscribe-submit_mobile"><img src="img/subscribe-icon-mail.svg"></a>
+							<a href="#" class="subscribe-submit subscribe-submit_mobile"><img
+									src="img/subscribe-icon-mail.svg"></a>
 						</form>
-						<span>Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности.</span>
+						<span>Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c
+							политикой конфиденциальности.</span>
 					</div>
-				</div>	
+				</div>
 			</div>
 		</div>
 	</footer>
 	<script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/ui.js"></script>
+	<script src="js/inputmask.min.js"></script>
+	<script src="js/meplayer.min.js"></script>
+	<script src="js/autocomplete.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

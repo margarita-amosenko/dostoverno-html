@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<title>Мероприятия</title>
+	<title>Видео</title>
 	<meta name="description" content="" />
 	<link rel="icon" type="image/png" href="img/favicon.ico" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -39,11 +39,44 @@
 						<li><a href="#">Вопросы/ответы</a></li>
 						<li><a href="#">Контакты</a></li>
 					</ul>
-					<div class="user-wrapper">
-						<a href="#" class="user-button" id="userHeaderButton">
-							<img src="img/tmp/author-photo-2.jpg">
-							<span>Личный кабинет</span>
+					<div class="login-wrapper" id="loginWrapper">
+						<a href="#" class="login-button" id="loginHeaderButton">
+							<svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M17.3976 32.2318C17.3043 32.2335 17.2109 32.2344 17.1172 32.2344C17.1022 32.2344 17.0873 32.2344 17.0724 32.2343C17.1808 32.2341 17.2892 32.2333 17.3976 32.2318ZM26.9945 28.5617C26.8452 25.3144 23.6891 22.5029 21.053 21.034C20.8921 23.9521 17.002 26.269 17.002 26.269C17.002 26.269 13.2296 23.9521 13.0687 21.034C10.4826 22.4728 7.29368 25.2037 7.01906 28.3671C3.93795 25.5996 2 21.5847 2 17.1172C2 8.7682 8.7682 2 17.1172 2C25.4662 2 32.2344 8.7682 32.2344 17.1172C32.2344 21.6905 30.2035 25.7896 26.9945 28.5617ZM34.2344 17.1172C34.2344 26.5707 26.5707 34.2344 17.1172 34.2344C7.66363 34.2344 0 26.5707 0 17.1172C0 7.66363 7.66363 0 17.1172 0C26.5707 0 34.2344 7.66363 34.2344 17.1172ZM23.0903 15.4089C23.0903 18.819 20.3644 21.5834 17.002 21.5834C13.6395 21.5834 10.9136 18.819 10.9136 15.4089C10.9136 11.9988 13.6395 9.23438 17.002 9.23438C20.3644 9.23438 23.0903 11.9988 23.0903 15.4089Z"
+									fill="#4C5E79" />
+							</svg>
+							<span>Вход в личный кабинет</span>
 						</a>
+						<div class="login-popup" id="popupLogin">
+							<form action="" class="login-popup__form">
+								<div class="form-group">
+									<input type="text" class="form-control password-input login-popup__input"
+										placeholder="Логин">
+								</div>
+								<div class="form-group form-group-password">
+									<input type="password" class="form-control password-input login-popup__input"
+										placeholder="Пароль">
+									<a href="#" class="password-button"></a>
+								</div>
+								<a href="#" class="button button_blue login-popup__btn">
+									Войти
+								</a>
+							</form>
+							<p class="login-popup__additional-text">
+								Вы также можете войти с помощью своего аккаунта
+							</p>
+							<div class="login-popup__og-providers">
+								<a href="#"><img src="img/icon-gmail.svg"></a>
+								<a href="#"><img src="img/icon-fb.svg"></a>
+							</div>
+							<p class="login-popup__additional-text">
+								<a href="#">Забыли пароль?</a><br>
+								или<br>
+								<a href="#">регистрация</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -69,10 +102,10 @@
 			<div class="row">
 				<div class="col main-menu-row">
 					<ul class="main-menu">
-						<li><a href="#" class="main-menu__link">Видео</a></li>
+						<li><a href="#" class="main-menu__link active">Видео</a></li>
 						<li><a href="#" class="main-menu__link">Подкасты</a></li>
 						<li><a href="#" class="main-menu__link">Курсы</a></li>
-						<li><a href="#" class="main-menu__link active">Мероприятия</a></li>
+						<li><a href="#" class="main-menu__link">Мероприятия</a></li>
 						<li><a href="#" class="main-menu__link">Тренажер</a></li>
 					</ul>
 					<form action="" class="search-form" if="headerSearchForm">
@@ -85,137 +118,184 @@
 			</div>
 			<div class="main-screen main-screen-inner-page">
 				<div class="main-screen__content tiled-page">
-					<div class="row main-screen__mob-title">
-						<div class="col-12">
-							<h3>мероприятия</h3>
-						</div>
-					</div>
 					<div class="row">
 						<div class="col secondary-menu-wrapper">
 							<ul class="secondary-menu">
 								<li class="active"><a href="#" class="secondary-menu__link active">Все</a></li>
-								<li><a href="#" class="secondary-menu__link">Интервью</a></li>
-								<li><a href="#" class="secondary-menu__link">Искусство</a></li>
-								<li><a href="#" class="secondary-menu__link">История</a></li>
-								<li><a href="#" class="secondary-menu__link">Кино и театр</a></li>
-								<li><a href="#" class="secondary-menu__link">Литература</a></li>
-								<li><a href="#" class="secondary-menu__link">Мода</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col events-menu-wrapper">
-							<div class="dropdown secondary-menu-sort" tabindex="1">
-								<div class="select">
-									<span>Все</span>
-									<img src="img/icon-dropdown.svg" class="arrow">
-								</div>
-								<input type="hidden" name="input_name1">
-								<ul class="dropdown-menu" style="display: none;">
-									<li>Все</li>
-									<li>Интервью</li>
-									<li>История</li>
-									<li>Кино и театр</li>
-									<li>Литература</li>
-									<li>Мода</li>
-								</ul>
-							</div>
-							<div class="dropdown index-main__sort" tabindex="1">
-								<div class="select">
-									<img src="img/icon-filter.svg">
-									<span>по дате</span>
-									<img src="img/icon-dropdown.svg" class="arrow">
-								</div>
-								<input type="hidden" name="input_name1">
-								<ul class="dropdown-menu" style="display: none;">
-									<li>по дате</li>
-									<li>по популярности</li>
-									<li>по дате</li>
-									<li>по дате</li>
-								</ul>
-							</div>
-							<ul class="filter-menu events-filter-menu">
-								<li><a href="#" class="filter-menu__link active">Все</a></li>
-								<li><a href="#" class="filter-menu__link">Офлайн</a></li>
-								<li><a href="#" class="filter-menu__link">Онлайн</a></li>
+								<li><a href="#" class="secondary-menu__link">Аудиолекции</a></li>
+								<li><a href="#" class="secondary-menu__link">Оригинальные подкасты</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-12">
-							<h2 class="page-title events-page__title">Расписание 1 февр. - 28 февр.</h2>
+							<h2 class="page-title">Служитель науки</h2>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-12">
-							<div class="grid-container_4col">
-								<div class="card event-card material-card">
-									<a href="#" class="image-wrapper">
-										<img src="img/tmp/event-preview.png">
-									</a>
-									<div class="card-body">
-										<div class="event-card__data">
-											<div class="event-card__date"><strong>24 ФЕВРАЛЯ</strong> | 18:00</div>
-											<a href="#" class="card-title">Становление легенды. Военное кино СССР</a>
-											<div class="event-card__location">Москва</div>
+							<ul class="filter-menu video-filter-menu">
+								<li><a href="#" class="filter-menu__link">Древняя Русь</a></li>
+								<li><a href="#" class="filter-menu__link">Московское государство</a></li>
+								<li><a href="#" class="filter-menu__link">Империя</a></li>
+								<li><a href="#" class="filter-menu__link">XIX век</a></li>
+								<li><a href="#" class="filter-menu__link">XX век</a></li>
+								<li><a href="#" class="filter-menu__link">Современная Россия</a></li>
+								<li><a href="#" class="filter-menu__link">Новый период</a></li>
+								<li><a href="#" class="filter-menu__link">Новый период</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row tiled-page__content filter-page__content">
+						<div class="col-12 col-xl-3 col-lg-3">
+							<div class="filters-sidebar">
+								<form action="">
+									<div class="filter-accordion">
+										<div class="filter-accordion__header">
+											<div class="left">
+												<img src="img/icon-filter.svg">
+												периоды
+											</div>
+											<img src="img/icon-dropdown.svg" class="arrow">
 										</div>
-										<a href="javascript:void(0);" class="add-to-fav"><svg width="17" height="31"
-												viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M1 29V1H16V29L8.5 24L1 29Z" stroke="black" stroke-width="2" />
-											</svg></a>
-									</div>
-								</div>
-								<div class="card event-card material-card">
-									<a href="#" class="image-wrapper">
-										<img src="img/tmp/event-preview.png">
-									</a>
-									<div class="card-body">
-										<div class="event-card__data">
-											<div class="event-card__date"><strong>24 ФЕВРАЛЯ</strong> | 18:00</div>
-											<a href="#" class="card-title">Становление легенды. Военное кино СССР</a>
-											<div class="event-card__location">Москва</div>
+										<div class="filter-accordion__body">
+											<input type="text" class="autocomplete filter-accordion__input"
+												name="period" placeholder="введите период">
 										</div>
-										<a href="javascript:void(0);" class="add-to-fav"><svg width="17" height="31"
-												viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M1 29V1H16V29L8.5 24L1 29Z" stroke="black" stroke-width="2" />
-											</svg></a>
 									</div>
-									<a href="#" class="button button_purple">купить билет</a>
-								</div>
-								<div class="card event-card material-card">
-									<a href="#" class="image-wrapper">
-										<img src="img/tmp/event-preview.png">
-									</a>
-									<div class="card-body">
-										<div class="event-card__data">
-											<div class="event-card__date"><strong>24 ФЕВРАЛЯ</strong> | 18:00</div>
-											<a href="#" class="card-title">Становление легенды. Военное кино СССР</a>
-											<div class="event-card__location">Москва</div>
+									<div class="filter-accordion">
+										<div class="filter-accordion__header">
+											<div class="left">
+												<img src="img/icon-filter.svg">
+												века
+											</div>
+											<img src="img/icon-dropdown.svg" class="arrow">
 										</div>
-										<a href="javascript:void(0);" class="add-to-fav"><svg width="17" height="31"
-												viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M1 29V1H16V29L8.5 24L1 29Z" stroke="black" stroke-width="2" />
-											</svg></a>
-									</div>
-								</div>
-								<div class="card event-card material-card">
-									<a href="#" class="image-wrapper">
-										<img src="img/tmp/event-preview.png">
-									</a>
-									<div class="card-body">
-										<div class="event-card__data">
-											<div class="event-card__date"><strong>24 ФЕВРАЛЯ</strong> | 18:00</div>
-											<a href="#" class="card-title">Становление легенды. Военное кино СССР</a>
-											<div class="event-card__location">Москва</div>
+										<div class="filter-accordion__body">
+											<div class="radio-group">
+												<input type="radio" name="centuries" id="IV-IX_centuriesRadio"
+													class="radio" value="IV-IX" checked="checked">
+												<label for="IV-IX_centuriesRadio">IV - IX</label>
+											</div>
+											<div class="radio-group">
+												<input type="radio" name="centuries" id="X-XII_centuriesRadio"
+													value="X-XII" class="radio">
+												<label for="X-XII_centuriesRadio">X-XII</label>
+											</div>
+											<div class="radio-group">
+												<input type="radio" name="centuries" id="XV_centuryRadio" value="XV"
+													class="radio">
+												<label for="XV_centuryRadio">XV</label>
+											</div>
+											<div class="radio-group">
+												<input type="radio" name="centuries" id="XI_centuryRadio" value="XI"
+													class="radio">
+												<label for="XI_centuryRadio">XI</label>
+											</div>
 										</div>
-										<a href="javascript:void(0);" class="add-to-fav"><svg width="17" height="31"
-												viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M1 29V1H16V29L8.5 24L1 29Z" stroke="black" stroke-width="2" />
-											</svg></a>
 									</div>
-									<a href="#" class="button button_purple">купить билет</a>
+									<div class="filter-accordion">
+										<div class="filter-accordion__header">
+											<div class="left">
+												<img src="img/icon-filter.svg">
+												личности
+											</div>
+											<img src="img/icon-dropdown.svg" class="arrow">
+										</div>
+										<div class="filter-accordion__body">
+											<input type="text" class="filter-accordion__input"
+												placeholder="введите личность">
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="col-12 col-xl-9 col-lg-9 grid-container_3col">
+							<div class="card">
+								<a href="#" class="image-wrapper">
+									<img src="img/tmp/podcast-preview-2.png">
+								</a>
+								<div class="card-body">
+									<a href="#" class="card-title">Интервью с режиссером. Андрей Смирнов о советском
+										кинематографе</a>
+									<ul class="card-info">
+										<li>25.12.2020</li>
+										<li>Автор: <strong>Ольга Хохлова</strong></li>
+									</ul>
+									<a href="#" class="badge badge_red">Гости Лектория</a>
 								</div>
 							</div>
+							<div class="card">
+								<a href="#" class="image-wrapper">
+									<img src="img/tmp/podcast-preview-2.png">
+								</a>
+								<div class="card-body">
+									<a href="#" class="card-title">Интервью с режиссером. Андрей Смирнов о советском
+										кинематографе</a>
+									<ul class="card-info">
+										<li>25.12.2020</li>
+										<li>Автор: <strong>Ольга Хохлова</strong></li>
+									</ul>
+									<a href="#" class="badge badge_red">Гости Лектория</a>
+								</div>
+							</div>
+							<div class="card">
+								<a href="#" class="image-wrapper">
+									<img src="img/tmp/podcast-preview-2.png">
+								</a>
+								<div class="card-body">
+									<a href="#" class="card-title">Интервью с режиссером. Андрей Смирнов о советском
+										кинематографе</a>
+									<ul class="card-info">
+										<li>25.12.2020</li>
+										<li>Автор: <strong>Ольга Хохлова</strong></li>
+									</ul>
+									<a href="#" class="badge badge_red">Гости Лектория</a>
+								</div>
+							</div>
+							<div class="card">
+								<a href="#" class="image-wrapper">
+									<img src="img/tmp/podcast-preview-2.png">
+								</a>
+								<div class="card-body">
+									<a href="#" class="card-title">Интервью с режиссером. Андрей Смирнов о советском
+										кинематографе</a>
+									<ul class="card-info">
+										<li>25.12.2020</li>
+										<li>Автор: <strong>Ольга Хохлова</strong></li>
+									</ul>
+									<a href="#" class="badge badge_red">Гости Лектория</a>
+								</div>
+							</div>
+							<div class="card">
+								<a href="#" class="image-wrapper">
+									<img src="img/tmp/podcast-preview-2.png">
+								</a>
+								<div class="card-body">
+									<a href="#" class="card-title">Интервью с режиссером. Андрей Смирнов о советском
+										кинематографе</a>
+									<ul class="card-info">
+										<li>25.12.2020</li>
+										<li>Автор: <strong>Ольга Хохлова</strong></li>
+									</ul>
+									<a href="#" class="badge badge_red">Гости Лектория</a>
+								</div>
+							</div>
+							<div class="card">
+								<a href="#" class="image-wrapper">
+									<img src="img/tmp/podcast-preview-2.png">
+								</a>
+								<div class="card-body">
+									<a href="#" class="card-title">Интервью с режиссером. Андрей Смирнов о советском
+										кинематографе</a>
+									<ul class="card-info">
+										<li>25.12.2020</li>
+										<li>Автор: <strong>Ольга Хохлова</strong></li>
+									</ul>
+									<a href="#" class="badge badge_red">Гости Лектория</a>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
@@ -237,9 +317,14 @@
 						</form>
 					</div>
 					<div class="col footer-registration">
-						<a href="#" class="user-button">
-							<span>Личный кабинет</span>
-							<img src="img/tmp/author-photo-2.jpg">
+						<a href="#" class="button button_blue">регистрация</a>
+						<a href="#" class="sign-in" id="">
+							<svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M17.3976 32.2318C17.3043 32.2335 17.2109 32.2344 17.1172 32.2344C17.1022 32.2344 17.0873 32.2344 17.0724 32.2343C17.1808 32.2341 17.2892 32.2333 17.3976 32.2318ZM26.9945 28.5617C26.8452 25.3144 23.6891 22.5029 21.053 21.034C20.8921 23.9521 17.002 26.269 17.002 26.269C17.002 26.269 13.2296 23.9521 13.0687 21.034C10.4826 22.4728 7.29368 25.2037 7.01906 28.3671C3.93795 25.5996 2 21.5847 2 17.1172C2 8.7682 8.7682 2 17.1172 2C25.4662 2 32.2344 8.7682 32.2344 17.1172C32.2344 21.6905 30.2035 25.7896 26.9945 28.5617ZM34.2344 17.1172C34.2344 26.5707 26.5707 34.2344 17.1172 34.2344C7.66363 34.2344 0 26.5707 0 17.1172C0 7.66363 7.66363 0 17.1172 0C26.5707 0 34.2344 7.66363 34.2344 17.1172ZM23.0903 15.4089C23.0903 18.819 20.3644 21.5834 17.002 21.5834C13.6395 21.5834 10.9136 18.819 10.9136 15.4089C10.9136 11.9988 13.6395 9.23438 17.002 9.23438C20.3644 9.23438 23.0903 11.9988 23.0903 15.4089Z"
+									fill="#ffffff" />
+							</svg>
 						</a>
 					</div>
 				</div>

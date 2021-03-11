@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<title>Платные материалы</title>
+	<title>Личные данные</title>
 	<meta name="description" content="" />
 	<link rel="icon" type="image/png" href="img/favicon.ico" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -68,7 +68,7 @@
                     <ul class="main-menu">
                         <li><a href="#" class="main-menu__link">Видео</a></li>
                         <li><a href="#" class="main-menu__link">Подкасты</a></li>
-                        <li><a href="#" class="main-menu__link active">Курсы</a></li>
+                        <li><a href="#" class="main-menu__link">Курсы</a></li>
                         <li><a href="#" class="main-menu__link">Мероприятия</a></li>
                         <li><a href="#" class="main-menu__link">Тренажер</a></li>
                     </ul>
@@ -79,193 +79,77 @@
 				</div>
             </div>
 			<div class="main-screen main-screen-inner-page">
-				<div class="main-screen__content tiled-page">
-					<div class="row main-screen__mob-title">
-						<div class="col-12">
-							<h3>Курсы</h3>
-						</div>
-					</div>
+				<div class="main-screen__content info-page">
 					<div class="row">
-						<div class="col secondary-menu-wrapper">
-							<ul class="secondary-menu">
-								<li class="active"><a href="#" class="secondary-menu__link">Все</a></li>
-								<li><a href="#" class="secondary-menu__link">Интервью</a></li>
-								<li><a href="#" class="secondary-menu__link active">Искусство</a></li>
-                                <li><a href="#" class="secondary-menu__link">История</a></li>
-                                <li><a href="#" class="secondary-menu__link">Кино и театр</a></li>
-                                <li><a href="#" class="secondary-menu__link">Литература</a></li>
-                                <li><a href="#" class="secondary-menu__link">Мода</a></li>
-							</ul>
-							<div class="dropdown secondary-menu-sort" tabindex="1">
-								<div class="select">
-									<span>Все</span>
-									<img src="img/icon-dropdown.svg" class="arrow">
-								</div>
-								<input type="hidden" name="input_name1">
-								<ul class="dropdown-menu" style="display: none;">
-                                    <li>Все</li>
-									<li>Аудиолекции</li>
-									<li>Оригинальные подкасты</li>
-								</ul>
-							</div>
-							<div class="dropdown index-main__sort" tabindex="1">
-								<div class="select">
-									<img src="img/icon-filter.svg">
-									<span>по дате</span>
-									<img src="img/icon-dropdown.svg" class="arrow">
-								</div>
-								<input type="hidden" name="input_name1">
-								<ul class="dropdown-menu" style="display: none;">
-									<li>по дате</li>
-									<li>по популярности</li>
-									<li>по дате</li>
-									<li>по дате</li>
-								</ul>
-							</div>
+                        <div class="col-12">
+                            <h2 class="page-title">Мой профиль</h2>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-12 tiled-page__content">
-							<div class="main-cards-container material-cards-container">
-                                <div class="card material-card_paid">
-									<a href="#" class="image-wrapper">
-										<img src="img/tmp/podcast-preview-1.png">
-									</a>
-									<div class="card-body">
-										<div>
-											<a href="#" class="card-title">Все тайное в Царской империи становится явным — диалог с правнуком русского Шерлока Холмса. Часть I</a>
-											<ul class="card-info">
-												<li>25.12.2020</li>
-												<li>Автор: <strong>Эспарса Анна</strong></li>
-											</ul>
-											<div class="bottom">
-												<a href="#" class="badge badge_mint">Лекции</a>
-											<span class="bought">Куплено</span>
-											</div>
-										</div>   
-									</div>
-									<a href="#" class="button button_purple button_purple-filled">Смотреть</a>
-								</div>
-                                <div class="card material-card">
-									<a href="#" class="image-wrapper">
-										<img src="img/tmp/podcast-preview-1.png">
-									</a>
-									<div class="card-body">
-                                        <div>
-                                            <a href="#" class="card-title">Все тайное в Царской империи становится явным — диалог с правнуком русского Шерлока Холмса. Часть I</a>
-                                            <ul class="card-info">
-                                                <li>25.12.2020</li>
-                                                <li>Автор: <strong>Эспарса Анна</strong></li>
-                                            </ul>
-                                            <a href="#" class="badge badge_red">Гости Лектория</a>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 profile-row">
+                            <div class="profile-sidebar">
+                                <ul class="profile-list">
+                                    <li><a href="#" class="profile-list__link active">Мой профиль</a></li>
+                                    <li><a href="#" class="profile-list__link">Мои покупки</a></li>
+                                    <li><a href="#" class="profile-list__link">Мои интересы</a></li>
+                                    <li><a href="#" class="profile-list__link">Избранное</a></li>
+                                    <li><a href="#" class="profile-list__link">История просмотров</a></li>
+                                    <li><a href="#" class="profile-list__link">Управление рассылкой</a></li>
+                                    <li><a href="#" class="profile-list__link">Выход</a></li>
+                                </ul>
+                            </div>
+                            <div class="profile-right">
+                                <form action="" class="profile-form">
+                                    <h4>Мои данные</h4>
+                                    <div class="profile-form-section">
+                                        <div class="form-group">
+                                            <input type="text" class="form-input" placeholder="Фамилия">
                                         </div>
-                                        <a href="javascript:void(0);" class="add-to-fav"><svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 29V1H16V29L8.5 24L1 29Z" stroke="black" stroke-width="2"/>
-                                            </svg></a>
-									</div>
-                                    <a href="#" class="button button_purple">купить</a>
-								</div>
-                                <div class="card material-card_paid">
-									<a href="#" class="image-wrapper">
-										<img src="img/tmp/podcast-preview-1.png">
-									</a>
-									<div class="card-body">
-										<div>
-											<a href="#" class="card-title">Все тайное в Царской империи становится явным — диалог с правнуком русского Шерлока Холмса. Часть I</a>
-											<ul class="card-info">
-												<li>25.12.2020</li>
-												<li>Автор: <strong>Эспарса Анна</strong></li>
-											</ul>
-											<div class="bottom">
-												<a href="#" class="badge badge_mint">Лекции</a>
-											<span class="bought">Куплено</span>
-											</div>
-										</div>   
-									</div>
-									<a href="#" class="button button_purple button_purple-filled">Смотреть</a>
-								</div>
-                                <div class="card material-card">
-									<a href="#" class="image-wrapper">
-										<img src="img/tmp/podcast-preview-1.png">
-									</a>
-									<div class="card-body">
-                                        <div>
-                                            <a href="#" class="card-title">Все тайное в Царской империи становится явным — диалог с правнуком русского Шерлока Холмса. Часть I</a>
-                                            <ul class="card-info">
-                                                <li>25.12.2020</li>
-                                                <li>Автор: <strong>Эспарса Анна</strong></li>
-                                            </ul>
-                                            <a href="#" class="badge badge_red">Гости Лектория</a>
+                                        <div class="form-group">
+                                            <input type="text" class="form-input" placeholder="Имя">
                                         </div>
-                                        <a href="javascript:void(0);" class="add-to-fav"><svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 29V1H16V29L8.5 24L1 29Z" stroke="black" stroke-width="2"/>
-                                            </svg></a>
-									</div>
-                                    <a href="#" class="button button_purple">купить</a>
-								</div>
-                                <div class="card material-card">
-									<a href="#" class="image-wrapper">
-										<img src="img/tmp/podcast-preview-1.png">
-									</a>
-									<div class="card-body">
-                                        <div>
-                                            <a href="#" class="card-title">Все тайное в Царской империи становится явным — диалог с правнуком русского Шерлока Холмса. Часть I</a>
-                                            <ul class="card-info">
-                                                <li>25.12.2020</li>
-                                                <li>Автор: <strong>Эспарса Анна</strong></li>
-                                            </ul>
-                                            <a href="#" class="badge badge_red">Гости Лектория</a>
+                                        <div class="form-group">
+                                            <input type="text" class="form-input" placeholder="Отчество">
                                         </div>
-                                        <a href="javascript:void(0);" class="add-to-fav"><svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 29V1H16V29L8.5 24L1 29Z" stroke="black" stroke-width="2"/>
-                                            </svg></a>
-									</div>
-                                    <a href="#" class="button button_purple">купить</a>
-								</div>
-                                <div class="card material-card">
-									<a href="#" class="image-wrapper">
-										<img src="img/tmp/podcast-preview-1.png">
-									</a>
-									<div class="card-body">
-                                        <div>
-                                            <a href="#" class="card-title">Все тайное в Царской империи становится явным — диалог с правнуком русского Шерлока Холмса. Часть I</a>
-                                            <ul class="card-info">
-                                                <li>25.12.2020</li>
-                                                <li>Автор: <strong>Эспарса Анна</strong></li>
-                                            </ul>
-                                            <a href="#" class="badge badge_red">Гости Лектория</a>
+                                        <div class="form-group">
+                                            <input type="text" class="form-input" placeholder="Дата рождения">
                                         </div>
-                                        <a href="javascript:void(0);" class="add-to-fav"><svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 29V1H16V29L8.5 24L1 29Z" stroke="black" stroke-width="2"/>
-                                            </svg></a>
-									</div>
-                                    <a href="#" class="button button_purple">купить</a>
-								</div>
-                                <div class="card material-card">
-									<a href="#" class="image-wrapper">
-										<img src="img/tmp/podcast-preview-1.png">
-									</a>
-									<div class="card-body">
-                                        <div>
-                                            <a href="#" class="card-title">Все тайное в Царской империи становится явным — диалог с правнуком русского Шерлока Холмса. Часть I</a>
-                                            <ul class="card-info">
-                                                <li>25.12.2020</li>
-                                                <li>Автор: <strong>Эспарса Анна</strong></li>
-                                            </ul>
-                                            <a href="#" class="badge badge_red">Гости Лектория</a>
+                                        <div class="form-group">
+                                            <input type="text" class="form-input" placeholder="Город">
                                         </div>
-                                        <a href="javascript:void(0);" class="add-to-fav"><svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 29V1H16V29L8.5 24L1 29Z" stroke="black" stroke-width="2"/>
-                                            </svg></a>
-									</div>
-                                    <a href="#" class="button button_purple">купить</a>
-								</div>
-
-				
-
-							</div>
-						</div>
-					</div>
+                                        <div class="form-group form-group-plug">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-input mail-mask" placeholder="E-Mail">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-input phone-mask" placeholder="Телефон">
+                                        </div>
+                                        <div class="form-group form-group-plug">
+                                        </div>
+                                    </div>
+                                    <h4>Смена пароля</h4>                      
+                                    <div class="profile-form-section">                       
+                                        <div class="form-group form-group-password">
+                                            <input type="password" class="form-input password-input" placeholder="Старый пароль">
+                                            <a href="javascript:void(0)" class="password-button"></a>
+                                        </div>
+                                        <div class="form-group form-group-password">
+                                            <input type="password" class="form-input password-input" placeholder="Новый пароль">
+                                            <a href="javascript:void(0)" class="password-button"></a>
+                                        </div>
+                                        <div class="form-group form-group-password">
+                                            <input type="password" class="form-input password-input" placeholder="Подтверждение пароля">
+                                            <a href="javascript:void(0)" class="password-button"></a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group profile-form-submit-group">
+                                        <input type="submit" class="form-submit profile-form-submit button_purple" value="Сохранить изменения">
+                                    </div>                               
+                                </form>    
+                            </div>
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</div>

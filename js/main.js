@@ -1,19 +1,7 @@
 var window_height;
 var window_width;
 
-var sm_width = 720;
-var md_width = 1280;
-var current_mode = 0;
-
 $(function () {
-    var $body = $("body");
-
-    regulateMode();
-
-    $(window).resize(function () {
-        regulateMode($body);
-    });
-
     // Табы
     $(".tablink").click(function (e) {
         e.preventDefault();
@@ -61,7 +49,7 @@ $(function () {
     $(".mobile-menu-button").click(function (e) {
         e.preventDefault();
         $(this).toggleClass("opened");
-        $(".mobile-menu").toggleClass("opened");
+        $(".mobile-menu").slideToggle(300, function () { });
         $('#popupLogin').removeClass("active");
         $("#loginHeaderButton").removeClass("active");
     });
@@ -95,9 +83,9 @@ $(function () {
     });
 
     // Расшифровка
-    $(".decryption-button").click(function (e) {
+    $(".transcription-button").click(function (e) {
         e.preventDefault();
-        $(".decryption-text").toggleClass("active");
+        $(".transcription-text").toggleClass("active");
     });
 
     // Pagination
@@ -132,6 +120,8 @@ $(function () {
         e.preventDefault();
         $("#popupLogin").toggleClass("active");
         $(this).toggleClass("active");
+        $(".mobile-menu-button").removeClass("opened");
+        $(".mobile-menu").hide();
     });
 
     $(document).click(function (event) {
@@ -201,41 +191,80 @@ $(function () {
         $(".header").slideToggle();
     });
 
-    $(".accordion.active").find(".accordion-body").slideDown("fast");
-
-    $(".accordion-header").click(function () {
-        let $this = $(this);
-        $this.parent().toggleClass("active");
-        $this.parent().find(".accordion-body").stop().slideToggle(300);
-    });
-
-    function regulateMode() {
-        window_height = window.innerHeight;
-        window_width = $('body').innerWidth();;
-        $body.removeAttr("class");
-        $(".header").removeAttr("style");
-        if (window_width > md_width) {
-            current_mode = 0;
-            $body.addClass("normal");
-            $(".mobile-button").removeClass("active");
-            $(".header").removeAttr("style");
-        }
-        else if (window_width < sm_width) {
-            current_mode = 2;
-            $body.addClass("mobile");
-        }
-        else {
-            current_mode = 1;
-            $body.addClass("tablet");
-        }
-    }
-
     $('.autocomplete').autocomplete({
         serviceUrl: 'https://amosenko.ru/tmp/response.json', // ВСТАВЬТЕ СЮДА АДРЕС СВОЕГО СКРИПТА, КОТОРЫЙ ПРИНИМАЕТ ЗАПРОС ЧЕРЕЗ GET (?QUERY=) и ОТДАЕТ В ОТВЕТ JSON
         onSelect: function (suggestion) {
-            console.log("Вы выбрали"+suggestion);
+            console.log("Вы выбрали" + suggestion);
         }
     });
+
+    $(".mail-mask").inputmask({
+        mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+        showMaskOnHover: false,
+      });
+
+      $(".phone-mask").inputmask({
+        mask: "+7 (999) 999 99 99",
+        greedy: false
+      });
+
+      
+
+    if ($('.index-slider').length > 0) {
+        $('.index-slider').owlCarousel({
+            margin: 40,
+            items: 4,
+            nav: true,
+            navText: ["<img src='img/arrow-left.svg'>", "<img src='img/arrow-right.svg'>"],
+            responsive: {
+                0: {
+                    items: 1,
+                    stagePadding: 30,
+                    margin: 30,
+                    nav: false
+                },
+                480: {
+                    items: 2,
+                    margin: 30,
+                    stagePadding: 0
+                },
+                768: {
+                    items: 3,
+                    margin: 40
+                },
+                960: {
+                    items: 4,
+                }
+            }
+        });
+    }
+
+    if ($('.authors-slider').length > 0) {
+        $('.authors-slider').owlCarousel({
+            margin: 0,
+            items: 4,
+            nav: true,
+            navText: ["<img src='img/arrow-left.svg'>", "<img src='img/arrow-right.svg'>"],
+            responsive: {
+                0: {
+                    items: 1,
+                    stagePadding: 30,
+                    nav: false
+                },
+                480: {
+                    items: 2,
+                    margin: 30,
+                    stagePadding: 0
+                },
+                860: {
+                    items: 3
+                },
+                1200: {
+                    items: 4,
+                }
+            }
+        });
+    }
 
 });
 
@@ -253,8 +282,9 @@ MediaElementPlayer.prototype.buildspeed = function (player, controls, layers, me
                 } else {
                     speed.removeClass('mejs-speed-high').addClass('mejs-speed-normal');
                 }
-        });
+            });
 }
+
 MediaElementPlayer.prototype.builddownload = function (player, controls, layers, media) {
     var download = $('<a class="download-button" download href="' + player.getSrc() + '"></a>').appendTo(controls);
 }
