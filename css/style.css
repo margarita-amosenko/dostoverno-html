@@ -10619,6 +10619,7 @@ input.login-popup__input:-ms-input-placeholder {
 }
 .faq-accordion-header svg {
   margin-left: 5px;
+  flex-shrink: 0;
   -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
   -moz-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
   -o-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
