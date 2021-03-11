@@ -9517,9 +9517,9 @@ input.login-popup__input:-ms-input-placeholder {
   margin: 0;
 }
 .dostoverno-audio .mejs__pause > button {
-  background: #14305b url(../img/icon-play.svg);
+  background: #14305b url(../img/icon-stop.svg);
   background-repeat: no-repeat;
-  background-position: 15px center;
+  background-position: 14px center;
   height: 38px;
   width: 38px;
   border-radius: 38px;
