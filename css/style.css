@@ -9110,6 +9110,9 @@ input.login-popup__input:-ms-input-placeholder {
   padding-top: 73px;
   padding-bottom: 60px;
 }
+.info-page h4 {
+  font-size: 16px;
+}
 
 .secondary-menu {
   display: flex;
@@ -11040,6 +11043,22 @@ input.login-popup__input:-ms-input-placeholder {
   margin-top: 30px;
 }
 
+.text-section p {
+  color: #646464;
+}
+.text-section p:last-child {
+  margin-bottom: 0;
+}
+.text-section a {
+  color: #14305B;
+}
+.text-section a:hover {
+  text-decoration: underline;
+}
+.text-section h4 {
+  text-align: center;
+}
+
 .mobile-menu-wrapper {
   display: none;
 }
@@ -11706,6 +11725,9 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
   .profile-list li {
     margin-right: 2rem;
     word-wrap: nowrap;
+  }
+  .profile-list li:last-child {
+    margin-bottom: 1.5em;
   }
   .profile-list li a {
     border-bottom: 1px solid rgba(97, 131, 182, 0.3);
