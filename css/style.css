@@ -10229,7 +10229,10 @@ input.login-popup__input:-ms-input-placeholder {
   margin-left: 5px;
 }
 .material-card .button_purple {
-  padding: 0.8em 3.5em;
+  padding: 0.8em 2em;
+  min-width: 160px;
+  text-align: center;
+  justify-content: center;
 }
 
 .event-card__location {
@@ -12087,6 +12090,7 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
   .card .button_purple {
     margin-left: 0;
     margin-right: 0;
+    width: 100%;
   }
 
   .course-scheme {
