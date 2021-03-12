@@ -8248,7 +8248,7 @@ body.index {
 
 @font-face {
   font-family: "Charter ITC";
-  src: url("/fonts/OpenSans-Regular-webfont.otf") format("opentype");
+  src: url("../fonts/ITC-Charter.otf") format("opentype");
   font-weight: 900;
   font-style: italic;
 }
@@ -8466,7 +8466,7 @@ p {
 
 .badge {
   font-family: "Charter ITC", Georgia, serif;
-  font-weight: bold;
+  font-weight: 900;
   font-size: 1rem;
   font-style: italic;
   color: #000000;
