@@ -10923,7 +10923,9 @@ input.login-popup__input:-ms-input-placeholder {
   margin-left: 5px;
 }
 .material-card_paid .button_purple {
-  padding: 0.8em 3.5em;
+  padding: .8em 2em;
+  min-width: 160px;
+  text-align: center;
 }
 
 .profile-cards-container {
@@ -12084,6 +12086,10 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
     padding-top: 20px;
   }
   .card-body .badge {
+    margin-top: 10px;
+  }
+
+  .material-card_paid .bottom {
     margin-top: 10px;
   }
 
