@@ -622,7 +622,7 @@ progress {
 }
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
+    max-width: 1200px;
   }
 }
 .row {
@@ -9115,14 +9115,14 @@ input.login-popup__input:-ms-input-placeholder {
 }
 
 .secondary-menu {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-left: 60px;
-  margin-right: 60px;
+  justify-content: center;
+  margin-left: 30px;
 }
 .secondary-menu li {
-  margin-right: 50px;
+  margin-right: 40px;
 }
 .secondary-menu li:last-child {
   margin-right: 0;
@@ -9156,7 +9156,7 @@ input.login-popup__input:-ms-input-placeholder {
 }
 
 .index-main__sort {
-  margin-left: 60px;
+  margin-left: 30px;
   margin-top: 3.428rem;
   max-width: 250px;
 }
@@ -10169,8 +10169,7 @@ input.login-popup__input:-ms-input-placeholder {
   flex-wrap: wrap;
   align-items: center;
   margin-top: 32px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 30px;
 }
 .events-menu-wrapper .index-main__sort {
   margin-top: 0;
@@ -11551,6 +11550,9 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
 
   .transcription-button {
     margin-top: 30px;
+  }
+  .secondary-menu {
+    justify-content: flex-start;
   }
 }
 @media only screen and (max-width: 991px) {
