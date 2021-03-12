@@ -198,7 +198,7 @@ $(function () {
         }
     });
 
-    $(".mail-mask").inputmask({
+    /*$(".mail-mask").inputmask({
         mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
         showMaskOnHover: false,
       });
@@ -206,9 +206,7 @@ $(function () {
       $(".phone-mask").inputmask({
         mask: "+7 (999) 999 99 99",
         greedy: false
-      });
-
-      
+      });*/
 
     if ($('.index-slider').length > 0) {
         $('.index-slider').owlCarousel({
