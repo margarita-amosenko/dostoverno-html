@@ -191,14 +191,14 @@ $(function () {
         $(".header").slideToggle();
     });
 
-    $('.autocomplete').autocomplete({
+    /*$('.autocomplete').autocomplete({
         serviceUrl: 'https://amosenko.ru/tmp/response.json', // ВСТАВЬТЕ СЮДА АДРЕС СВОЕГО СКРИПТА, КОТОРЫЙ ПРИНИМАЕТ ЗАПРОС ЧЕРЕЗ GET (?QUERY=) и ОТДАЕТ В ОТВЕТ JSON
         onSelect: function (suggestion) {
             console.log("Вы выбрали" + suggestion);
         }
-    });
+    });*/
 
-    /*$(".mail-mask").inputmask({
+    $(".mail-mask").inputmask({
         mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
         showMaskOnHover: false,
       });
@@ -206,7 +206,7 @@ $(function () {
       $(".phone-mask").inputmask({
         mask: "+7 (999) 999 99 99",
         greedy: false
-      });*/
+      });
 
     if ($('.index-slider').length > 0) {
         $('.index-slider').owlCarousel({
