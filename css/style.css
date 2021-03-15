@@ -9115,10 +9115,9 @@ input.login-popup__input:-ms-input-placeholder {
 }
 
 .secondary-menu {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
   margin-left: 30px;
 }
 .secondary-menu li {
