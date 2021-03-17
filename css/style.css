@@ -10061,7 +10061,7 @@ input.login-popup__input:-ms-input-placeholder {
 .fixed-counter__list {
   margin-top: 10px;
   margin-bottom: 30px;
-  display: none;
+  /* display: none; */
 }
 .fixed-counter__list li {
   font-size: 1em;
