@@ -201,13 +201,6 @@ sup {
   top: -0.5em;
 }
 
-a {
-  color: #0d6efd;
-  text-decoration: underline;
-}
-a:hover {
-  color: #0a58ca;
-}
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
@@ -8280,6 +8273,7 @@ a {
   -moz-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
   -o-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
   transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+  color: #14305B;
   text-decoration: none;
 }
 a svg path {
