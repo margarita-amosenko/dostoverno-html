@@ -617,6 +617,9 @@ progress {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1200px;
   }
+  .header .container, .header_index .container {
+    max-width: 1240px;
+  }
 }
 .row {
   --bs-gutter-x: 1.5rem;
@@ -8272,7 +8275,7 @@ a {
   -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
   -moz-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
   -o-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
-  transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+  transition: color 0.2s cubic-bezier(0.4, 0, 1, 1), opacity .2s cubic-bezier(0.4, 0, 1, 1);
   color: #14305B;
   text-decoration: none;
 }
@@ -8603,7 +8606,29 @@ footer {
 .header__menu li:last-child {
   margin-right: 0;
 }
-
+.header__menu-fix, .header__menu-social {
+  flex: 1;
+}
+.header__menu-social {
+  display: inline-flex;
+  justify-content: flex-end;
+}
+.mobile__menu-social {
+  display: flex;
+  margin-top: 1rem;
+}
+.header__social-icon {
+  color: white;
+  margin-right: 1rem;
+  opacity: .4;
+  transition: opacity .5s;
+}
+.header__social-icon:hover {
+  opacity: 1;
+}
+.header__social-icon:last-child {
+  margin-right: 0;
+}
 .header {
   position: relative;
   background-color: #2f4465;
@@ -8618,6 +8643,9 @@ footer {
 .header__wrapper .header__menu {
   border-bottom: none;
   height: auto;
+  flex: 1;
+  padding-left: 54px;
+  padding-right: 54px;
 }
 
 .header__main {
@@ -8722,9 +8750,12 @@ footer .user-button span {
 .login-button span {
   font-weight: 500;
   text-decoration: underline;
-  width: 126px;
   margin-left: 1.1em;
   color: #ffffff;
+  max-width: 100px;
+}
+.login-button svg {
+  flex-shrink: 0;
 }
 .login-button:hover div {
   color: #ffffff;
@@ -11252,10 +11283,9 @@ input.login-popup__input:-ms-input-placeholder {
   display: flex;
   align-items: center;
   margin-top: 24px;
-  margin-left: 27px;
 }
 .footer-socials a {
-  margin-right: 44px;
+  margin-right: 14px;
 }
 .footer-socials a:last-child {
   margin-right: 0;
@@ -11571,9 +11601,17 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
   .secondary-menu {
     justify-content: flex-start;
   }
+  .header__wrapper .header__menu {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }
 @media only screen and (max-width: 991px) {
   .secondary-menu {
+    display: none;
+  }
+
+  .header__menu-social, .header__menu-fix {
     display: none;
   }
 
