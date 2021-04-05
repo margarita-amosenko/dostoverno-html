@@ -8468,43 +8468,53 @@ p {
   font-style: italic;
   color: #000000;
   text-decoration: underline;
-  padding: 5px 15px;
-  white-space: nowrap;
+  padding: 3.5px 15px;
+  /* white-space: nowrap; */
+  border-radius: 5px;
 }
+
 .badge:hover {
   color: #000000;
 }
 
 .badge_red {
-  background-color: #FFBBBB;
+  background-color: #FED6E3;
+  border: 1px solid #E5B2C3;
 }
 
 .badge_neonblue {
-  background-color: #02FFFC;
+  background-color: #ABF4F9;
+  border: 1px solid #7ECBD0;
 }
 
 .badge_blue {
-  background-color: #4DA9FF;
+  background-color: #A0DCFA;
+  border: 1px solid #85C5E5;
 }
 
 .badge_pink {
-  background-color: #EDC6FF;
+  background-color: #EDC6FD;
+  border: 1px solid #D2A0E7;
 }
 
 .badge_green {
-  background-color: #73FF89;
+  background-color: #79E588;
+  border: 1px solid #6DBE78;
 }
 
 .badge_yelowbrown {
-  background-color: #CDCA79;
+  background-color: #FBED96;
+  border: 1px solid #DCCF7D;
 }
 
 .badge_gray {
   background-color: #D2D2D2;
+  border: 1px solid #B7B7B7;
 }
 
 .badge_mint {
-  background-color: #4BFFC9;
+  background-color: #ABF4F9;
+  border: 1px solid #7ECBD0;
 }
 
 .card-body {
@@ -8972,7 +8982,8 @@ input.login-popup__input:-ms-input-placeholder {
 
 .index-main__video-screen iframe {
   width: 100%;
-  min-height: 430px;
+  height: auto;
+  min-height: 450px;
 }
 
 .index-main__video-description {
